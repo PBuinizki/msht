@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Максим Кривошеев | Frontend-разработчик</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Блок 1: Герой (Hero Section) -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <img
+          src="./photo_5271849907058838415_w.jpg"
+          alt="Фото Максима Кривошеева"
+          class="hero-avatar"
+        />
+        <h1>Максим Кривошеев</h1>
+        <p class="hero-profession">Frontend-разработчик</p>
+        <p class="hero-description">
+          Создаю удобные и быстрые веб-интерфейсы на React и Vue.js.
+        </p>
+        <a href="krivosheev.maks2008@gmail.com" class="btn">Написать мне</a>
+      </div>
+    </section>
+
+    <!-- Блок 2: Преимущества -->
+    <section id="advantages" class="advantages">
+      <div class="container">
+        <h2>Мои сильные стороны</h2>
+        <div class="advantages-grid">
+          <div class="advantage-item">
+            <img src="./photo_5271849907058838416_x.jpg" alt="Чистый код" />
+            <h3>Чистый код</h3>
+            <p>Пишу читаемый и поддерживаемый код, следуя лучшим практикам.</p>
+          </div>
+          <div class="advantage-item">
+            <img src="./photo_5271849907058838422_y.jpg" alt="Адаптивность" />
+            <h3>Адаптивный дизайн</h3>
+            <p>Сайты идеально выглядят на любом устройстве.</p>
+          </div>
+          <div class="advantage-item">
+            <img src="./photo_5271849907058838417_y.jpg" alt="Коммуникация" />
+            <h3>Коммуникация</h3>
+            <p>Открыт к диалогу, умею слушать и четко формулировать задачи.</p>
+          </div>
+          <!-- Добавьте еще преимущества -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок 3: Портфолио -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <h2>Мои работы</h2>
+        <div class="portfolio-grid">
+          <div class="portfolio-card">
+            <img
+              src="./photo_5271849907058838427_y.jpg"
+              alt="Скриншот проекта 1"
+            />
+            <div class="card-content">
+              <h3>Интернет-магазин "ТехноМир"</h3>
+              <p>
+                Корзина, фильтры, адаптивная верстка. Использовал HTML, CSS, JS.
+              </p>
+              <a
+                href="https://example.com/project1"
+                target="_blank"
+                class="btn-outline"
+                >Посмотреть проект</a
+              >
+            </div>
+          </div>
+          <div class="portfolio-card">
+            <img
+              src="./photo_5271849907058838430_y.jpg"
+              alt="Скриншот проекта 2"
+            />
+            <div class="card-content">
+              <h3>Приложение "Заметки"</h3>
+              <p>
+                SPA на React с возможностью создания и редактирования заметок.
+              </p>
+              <a
+                href="https://example.com/project2"
+                target="_blank"
+                class="btn-outline"
+                >Посмотреть проект</a
+              >
+            </div>
+          </div>
+          <!-- Добавьте еще карточки -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок 4: FAQ -->
+    <section id="faq" class="faq">
+      <div class="container">
+        <h2>Часто задаваемые вопросы</h2>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Сколько времени занимает создание сайта?
+            </button>
+            <div class="accordion-content">
+              <p>
+                Всё зависит от сложности проекта. Лендинг — от 1 недели,
+                интернет-магазин — от 3 недель. Точные сроки определяются после
+                обсуждения ТЗ.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">Вы работаете по договору?</button>
+            <div class="accordion-content">
+              <p>
+                Да, обязательно. Мы заключаем официальный договор, в котором
+                прописываем все этапы работы, сроки и стоимость.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Вы предоставляете гарантию на работу?
+            </button>
+            <div class="accordion-content">
+              <p>
+                Я предоставляю гарантию на 2 месяца после сдачи проекта, в
+                течение которой исправляю любые обнаруженные ошибки бесплатно.
+              </p>
+            </div>
+          </div>
+          <!-- Добавьте еще вопросы -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок 5: Контакты -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Свяжитесь со мной</h2>
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Ваш e-mail:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Ваше сообщение:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn">Отправить сообщение</button>
+        </form>
+        <div class="contact-links">
+          <a href="https://t.me/your_telegram" target="_blank">Telegram</a>
+          <a href="https://github.com/your_github" target="_blank">GitHub</a>
+          <a href="https://vk.com/your_vk" target="_blank">VK</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Максим Кривошеев. Все права защищены.</p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

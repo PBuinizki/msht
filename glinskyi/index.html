@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Моё портфолио</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Шапка сайта -->
+<header>
+<h1>Глинский Артем</h1>
+<nav>
+<ul>
+<li><a href="#about">Обо мне</a></li>
+<li><a href="#portfolio">Проекты</a></li>
+<li><a href="#contact">Контакты</a></li>
+</ul>
+</nav>
+</header>
+
+<!-- Приветственная секция -->
+<section id="home">
+<h2>Привет, я веб-разработчик</h2>
+<p>Создаю современные и функциональные веб-сайты</p>
+</section>
+
+<!-- Секция "Обо мне" -->
+<section id="about">
+<h2>Обо мне</h2>
+<img src="./fon.jpg" alt="Моё фото">
+<p>Глинский Артем-Программист.</p>
+<h3>Мои сильные стороны:</h3>
+<ul>
+<li>Логическое мышление. Умею разбираться в сложных задачах и принимать логические решения.</li>
+<li>Терпение и настойчивость. Написание качественного программного кода может занимать много времени и требовать усилий.</li>
+<li>Аналитические способности. Необходимо быстро анализировать информацию, чтобы найти оптимальное решение.</li>
+</ul>
+</section>
+
+<!-- Секция "Проекты" -->
+<section id="portfolio">
+<h2>Мои проекты</h2>
+
+<div class="project">
+<h3>Проект "Аккордион" </h3>
+<p>Проект сделанный с помощью трех файлов  1.index.html 2.style.css 3.script.js</p>
+<a href="file:///C:/Users/user/Desktop/Новая%20папка%20(2)/Новая%20папка%20(8)/index.html">Посмотреть проект</a>
+</div>
+
+<div class="project">
+<h3>Проект "Всплывающие окно"</h3>
+<p>Проект сделанный с помощью трех файлов  1.index.html 2.style.css 3.script.js</p>
+<a href="file:///C:/Users/user/Desktop/Новая%20папка%20(2)/Новая%20папка%20(13)/index.html">Посмотреть проект</a>
+</div>
+</section>
+
+</style>
+</head>
+<body>
+<h1>Часто задаваемые вопросы</h1>
+<button class="accordion">Из чего состоит форматированный текст HTML?</button>
+<div class="panel">
+  <p>В первую очередь, HTML — это контент и теги. Теги позволяют задать способ отображения контента на веб-страницах. </p>
+</div>
+<button class="accordion">Что такое HTML?</button>
+<div class="panel">
+  <p>Это стандартизированный язык, позволяющий составлять форматированный текст. Браузер интерпретирует его и отображает на экране элементы веб-страниц.</p>
+</div>
+
+<button class="accordion">Можем ли мы создать ссылку, которая ведёт на другую веб-страницу? с</button>
+<div class="panel">
+  <p>Да, для этого нужно использовать атрибут href.
+</p>
+</div>
+<button class="accordion">Может ли одна гиперссылка вести на разные страницы?</button>
+<div class="panel">
+  <p> Нет, одна гиперссылка может вести только на одну веб-страницу, адрес которой нужно указать. </p>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+<!-- Секция "Контакты" -->
+<section id="contact">
+<h2>Связаться со мной</h2>
+<p>Email: artem2008glin@gmail.com </p>
+<p>Телефон: +7 (927) 054-80-45</p>
+<a href="https://vk.com/id625514789">Вконтакте</a>
+</section>
+
+<!-- Подвал сайта -->
+<footer>
+<p>&copy; 2025 Артем Глинский. Все права защищены.</p>
+</footer>
+</body>
+</html>
+

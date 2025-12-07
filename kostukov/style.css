@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: #0052b1;
+    color: rgb(255, 255, 255);
+}
+
+.avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.contact-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: rgb(255, 255, 255);
+    color: #4a76a8;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.skills, .projects, .faq, .contact {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill-card {
+    flex: 1 1 200px;
+    padding: 15px;
+    background: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.project-card {
+    flex: 1 1 250px;
+    padding: 20px;
+    background: #4a76a8;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    background: #4a76a8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+    background: white;
+    border-radius: 6px;
+    margin-top: 5px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    padding: 12px;
+    background: #4a76a8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}

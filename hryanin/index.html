@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Моё портфолио | Веб-разработчик</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Навигация -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="logo">Портфолио</a>
+        <ul class="nav-links">
+          <li><a href="#home">Главная</a></li>
+          <li><a href="#advantages">Преимущества</a></li>
+          <li><a href="#works">Работы</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+        <button class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Блок 1: Имя, профессия, фото, контакты -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="name">Денис Хрянин</h1>
+            <h2 class="profession">Веб-разработчик & UI/UX дизайнер</h2>
+            <p class="description">
+              Создаю современные, адаптивные и интуитивно понятные
+              веб-приложения. Имею опыт работы с HTML5, CSS3, JavaScript, React
+              и Node.js. Увлечён созданием цифровых продуктов, которые решают
+              реальные проблемы пользователей.
+            </p>
+            <div class="contacts">
+              <a href="mailto:pubvenera14@gmail.com" class="contact-link">
+                <i class="fas fa-envelope"></i> pubvenera14@gmail.com
+              </a>
+              <a href="https://t.me/moonly_driil" class="contact-link">
+                <i class="fab fa-telegram"></i> Telegram
+              </a>
+              <a href="https://gitflic.ru/user/moonly_is" class="contact-link">
+                <i class="fab fa-github"></i> GitFlic
+              </a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="image-frame">
+              <img
+                src="./images/profile.jpg"
+                alt="Фото Александра Иванова"
+                class="profile-photo"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок 2: Сильные стороны / преимущества -->
+    <section id="advantages" class="advantages">
+      <div class="container">
+        <h2 class="section-title">Мои сильные стороны</h2>
+        <p class="section-subtitle">Почему стоит со мной работать</p>
+
+        <div class="advantages-grid">
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3>Чистый код</h3>
+            <p>
+              Пишу чистый, структурированный и хорошо документированный код,
+              соответствующий лучшим практикам.
+            </p>
+          </div>
+
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>Адаптивный дизайн</h3>
+            <p>
+              Создаю полностью адаптивные интерфейсы, которые отлично работают
+              на всех устройствах.
+            </p>
+          </div>
+
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3>Быстрая работа</h3>
+            <p>
+              Выполняю задачи в срок, эффективно управляю временем и
+              приоритетами.
+            </p>
+          </div>
+
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <i class="fas fa-comments"></i>
+            </div>
+            <h3>Общиельность</h3>
+            <p>Быстро нахожу общий язык с собеседником.</p>
+          </div>
+
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3>Креативность</h3>
+            <p>
+              Подхожу к решению задач творчески, предлагаю нестандартные и
+              эффективные решения.
+            </p>
+          </div>
+
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h3>Поддержка</h3>
+            <p>
+              Предоставляю поддержку после завершения проекта, помогаю с
+              доработками и обновлениями.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок 3: Работы (карточками) -->
+    <section id="works" class="works">
+      <div class="container">
+        <h2 class="section-title">Мои работы</h2>
+        <p class="section-subtitle">Примеры реализованных проектов</p>
+
+        <div class="works-grid">
+          <div class="work-card">
+            <div class="work-image">
+              <div class="work-category">Баг-репорт</div>
+            </div>
+            <div class="work-content">
+              <h3>Oценка сайта</h3>
+              <p>
+                Технический документ, который описывает обнаруженную проблему
+                (баг) в программном обеспечении.
+              </p>
+              <div class="work-tech">
+                <span>HTML/CSS</span>
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>Node.js</span>
+              </div>
+              <a href="#" class="work-link">Посмотреть проект</a>
+            </div>
+          </div>
+
+          <div class="work-card">
+            <div class="work-image">
+              <div class="work-category">Акардеон</div>
+            </div>
+            <div class="work-content">
+              <h3>Описание игр</h3>
+              <p>
+                UI-компонент (элемент пользовательского интерфейса), который
+                позволяет отображать контент в свёрнутых разделах, где
+                пользователь может раскрывать и скрывать содержимое каждого
+                раздела по отдельности.
+              </p>
+              <div class="work-tech">
+                <span>HTML/CSS</span>
+                <span>JavaScript</span>
+                <span>PHP</span>
+              </div>
+              <a href="#" class="work-link">Посмотреть проект</a>
+            </div>
+          </div>
+
+          <div class="work-card">
+            <div class="work-image">
+              <div class="work-category">Модальное окно</div>
+            </div>
+            <div class="work-content">
+              <h3>Tokyo Ghoul</h3>
+              <p>
+                Всплывающее диалоговое окно, которое появляется поверх основного
+                контента и блокирует взаимодействие с ним до тех пор, пока
+                пользователь не выполнит требуемое действие или не закроет окно.
+              </p>
+              <div class="work-tech">
+                <span>HTML/CSS</span>
+                <span>JavaScript</span>
+                <span>WordPress</span>
+              </div>
+              <a href="#" class="work-link">Посмотреть проект</a>
+            </div>
+          </div>
+
+          <div class="work-card">
+            <div class="work-image">
+              <div class="work-category">Шрифты и цвета</div>
+            </div>
+            <div class="work-content">
+              <h3>Первый проект</h3>
+              <p>Это мой первый проект.</p>
+              <div class="work-tech">
+                <span>React</span>
+                <span>Redux</span>
+                <span>Firebase</span>
+              </div>
+              <a href="#" class="work-link">Посмотреть проект</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок 4: FAQ (аккордеон) -->
+    <section id="faq" class="faq">
+      <div class="container">
+        <h2 class="section-title">Часто задаваемые вопросы</h2>
+        <p class="section-subtitle">
+          Ответы на популярные вопросы о моей работе
+        </p>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Какой у вас опыт работы?</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Я занимаюсь веб-разработкой более 3 лет. За это время я
+                реализовал более 20 проектов различной сложности - от лендингов
+                до полноценных веб-приложений. Работал как в команде, так и
+                самостоятельно.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Какие технологии вы используете?</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Основной стек: HTML5, CSS3, JavaScript (ES6+), React, Node.js.
+                Также работаю с Bootstrap, Git, Webpack, REST API. В дизайне
+                использую Figma, Adobe XD. Постоянно изучаю новые технологии и
+                фреймворки.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Как происходит процесс работы?</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                1. Обсуждение проекта и требований<br />
+                2. Создание прототипа/дизайна<br />
+                3. Разработка и регулярные демонстрации<br />
+                4. Тестирование и доработки<br />
+                5. Запуск проекта и поддержка
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Вы работаете с зарубежными заказчиками?</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Да, я работаю с заказчиками из разных стран. Владею английским
+                языком на уровне, достаточном для обсуждения проектов и
+                технических деталей. Готов к работе в разных часовых поясах.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span
+                >Предоставляете ли вы поддержку после завершения проекта?</span
+              >
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Да, я предоставляю гарантийную поддержку в течение 1 месяца
+                после сдачи проекта. В дальнейшем возможно заключение договора
+                на долгосрочное сопровождение с фиксированной ежемесячной
+                оплатой.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок 5: Форма обратной связи -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Свяжитесь со мной</h2>
+        <p class="section-subtitle">
+          Готов обсудить ваш проект или ответить на вопросы
+        </p>
+
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Контактная информация</h3>
+            <div class="contact-details">
+              <div class="contact-detail">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>Email</h4>
+                  <p>pubvenera14@gmail.com</p>
+                </div>
+              </div>
+              <div class="contact-detail">
+                <i class="fab fa-telegram"></i>
+                <div>
+                  <h4>Telegram</h4>
+                  <p>@Moonly_driil</p>
+                </div>
+              </div>
+              <div class="contact-detail">
+                <i class="fab fa-github"></i>
+                <div>
+                  <h4>GitFlic</h4>
+                  <p>https://gitflic.ru/user/moonly_is</p>
+                </div>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h4>Локация</h4>
+                  <p>Cаратов, Россия</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="feedback-form">
+            <h3>Форма обратной связи</h3>
+            <div class="form-group">
+              <label for="name">Ваше имя *</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Ваш email *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Тема сообщения</label>
+              <input type="text" id="subject" name="subject" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Сообщение *</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              Отправить сообщение
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">Портфолио</div>
+          <p>Веб-разработчик & UI/UX дизайнер</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-codepen"></i></a>
+          </div>
+          <p class="copyright">© 2023 Александр Иванов. Все права защищены.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+/* Общие стили для всего документа */
+body {
+font-family: 'Arial', sans-serif;
+line-height: 1.6;
+margin: 0;
+padding: 0;
+color: #333;
+background-color: #f8f8f8;
+}
+
+/* Стили для шапки сайта */
+header {
+background-color: #000000;
+color: white;
+padding: 20px;
+text-align: center;
+}
+
+header nav ul {
+list-style: none;
+padding: 0;
+display: flex;
+justify-content: center;
+gap: 20px;
+}
+
+header nav a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+}
+
+/* Стили для секций */
+section {
+padding: 50px 20px;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+/* Стили для проектов */
+.project {
+margin-bottom: 40px;
+background-color: white;
+border-radius: 5px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+padding: 20px;
+}
+
+.project img {
+max-width: 100%;
+border-radius: 3px;
+}
+
+/* Стили для контактной секции */
+#contact a {
+display: inline-block;
+margin-right: 15px;
+color: #3498db;
+text-decoration: none;
+}
+
+/* Стили для подвала */
+footer {
+background-color: #2c3e50;
+color: white;
+text-align: center;
+padding: 20px;
+margin-top: 20px;
+}
