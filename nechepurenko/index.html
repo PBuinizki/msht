@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Веб-дизайнер | Портфолио</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      :root {
+        --primary: #6c63ff;
+        --secondary: #4a44c6;
+        --accent: #ff6584;
+        --dark: #2a2d3e;
+        --light: #f7f7f7;
+        --gray: #8a8d9f;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+        color: var(--light);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Header & Navigation */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background: rgba(42, 45, 62, 0.95);
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+      }
+
+      header.scrolled {
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--light);
+        text-decoration: none;
+      }
+
+      .logo span {
+        color: var(--primary);
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+      }
+
+      .nav-links li {
+        margin-left: 30px;
+      }
+
+      .nav-links a {
+        color: var(--light);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+        position: relative;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary);
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--primary);
+        transition: width 0.3s;
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      .menu-toggle {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      /* Hero Section */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 100px 0 50px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background: rgba(108, 99, 255, 0.1);
+        z-index: -1;
+      }
+
+      .hero-content {
+        flex: 1;
+        max-width: 600px;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+
+      .hero h1 span {
+        color: var(--primary);
+        position: relative;
+      }
+
+      .hero h1 span::after {
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background: rgba(108, 99, 255, 0.3);
+        z-index: -1;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        color: var(--gray);
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background: var(--primary);
+        color: white;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
+      }
+
+      .btn:hover {
+        background: var(--secondary);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(108, 99, 255, 0.6);
+      }
+
+      .btn-outline {
+        background: transparent;
+        border: 2px solid var(--primary);
+        margin-left: 15px;
+      }
+
+      .btn-outline:hover {
+        background: var(--primary);
+      }
+
+      .hero-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .hero-image img {
+        max-width: 100%;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        animation: float 6s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      /* Sections */
+      section {
+        padding: 100px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .section-title h2 {
+        font-size: 2.5rem;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 15px;
+      }
+
+      .section-title h2::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: var(--primary);
+      }
+
+      .section-title p {
+        color: var(--gray);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* About Section */
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+      }
+
+      .about-text h3 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+      }
+
+      .skills {
+        margin-top: 30px;
+      }
+
+      .skill {
+        margin-bottom: 20px;
+      }
+
+      .skill-name {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+      }
+
+      .skill-bar {
+        height: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .skill-level {
+        height: 100%;
+        background: var(--primary);
+        border-radius: 10px;
+        position: relative;
+        width: 0;
+        transition: width 1.5s ease;
+      }
+
+      /* Services Section */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .service-card {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 15px;
+        padding: 30px;
+        transition: all 0.3s;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .service-icon {
+        font-size: 2.5rem;
+        color: var(--primary);
+        margin-bottom: 20px;
+      }
+
+      .service-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+      }
+
+      /* Portfolio Section */
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 30px;
+      }
+
+      .portfolio-item {
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+        height: 250px;
+        background: var(--dark);
+      }
+
+      .portfolio-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+
+      .portfolio-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(42, 45, 62, 0.9);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: all 0.3s;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .portfolio-item:hover .portfolio-overlay {
+        opacity: 1;
+      }
+
+      .portfolio-item:hover .portfolio-img {
+        transform: scale(1.1);
+      }
+
+      .portfolio-overlay h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      .portfolio-overlay p {
+        color: var(--gray);
+        margin-bottom: 20px;
+      }
+
+      /* Achievements Section */
+      .achievements-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+      }
+
+      .achievement-card {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 15px;
+        padding: 30px;
+        text-align: center;
+        transition: all 0.3s;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .achievement-card:hover {
+        transform: translateY(-10px);
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .achievement-icon {
+        font-size: 3rem;
+        color: var(--primary);
+        margin-bottom: 20px;
+      }
+
+      .achievement-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: var(--primary);
+      }
+
+      /* Testimonials Section */
+      .testimonials-slider {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .testimonials-container {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+
+      .testimonial-card {
+        min-width: 100%;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 15px;
+        padding: 30px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .client-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin: 0 auto 20px;
+        background: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: white;
+      }
+
+      .testimonial-text {
+        font-style: italic;
+        margin-bottom: 20px;
+        line-height: 1.8;
+      }
+
+      .client-name {
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+
+      .client-role {
+        color: var(--gray);
+        font-size: 0.9rem;
+      }
+
+      .slider-controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        gap: 10px;
+      }
+
+      .slider-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .slider-dot.active {
+        background: var(--primary);
+        transform: scale(1.2);
+      }
+
+      /* Contact Section */
+      .contact-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+      }
+
+      .contact-icon {
+        width: 50px;
+        height: 50px;
+        background: rgba(108, 99, 255, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        color: var(--primary);
+        font-size: 1.2rem;
+      }
+
+      .contact-form {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 15px;
+        padding: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        color: white;
+        font-size: 1rem;
+        transition: all 0.3s;
+      }
+
+      .form-control:focus {
+        outline: none;
+        border-color: var(--primary);
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      textarea.form-control {
+        min-height: 150px;
+        resize: vertical;
+      }
+
+      /* Footer */
+      footer {
+        background: rgba(0, 0, 0, 0.3);
+        padding: 50px 0 20px;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+      }
+
+      .social-link {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+
+      .social-link:hover {
+        background: var(--primary);
+        transform: translateY(-5px);
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--gray);
+        font-size: 0.9rem;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 992px) {
+        .hero {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .hero-content {
+          margin-bottom: 50px;
+        }
+
+        .about-content {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-content {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+
+        .nav-links {
+          position: fixed;
+          top: 70px;
+          left: -100%;
+          width: 100%;
+          height: calc(100vh - 70px);
+          background: var(--dark);
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          padding-top: 50px;
+          transition: all 0.5s ease;
+        }
+
+        .nav-links.active {
+          left: 0;
+        }
+
+        .nav-links li {
+          margin: 15px 0;
+        }
+
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .section-title h2 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <div class="container">
+        <nav>
+          <a href="#" class="logo">Portfo<span>lio.</span></a>
+          <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#portfolio">Портфолио</a></li>
+            <li><a href="#achievements">Достижения</a></li>
+            <li><a href="#contact">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Я <span>Веб-дизайнер</span>, создающий цифровые впечатления</h1>
+          <p>
+            Специализируюсь на создании современных, интуитивных и визуально
+            привлекательных веб-интерфейсов, которые преобразуют бизнес-идеи в
+            цифровые решения.
+          </p>
+          <div class="hero-buttons">
+            <a href="#portfolio" class="btn">Мои работы</a>
+            <a href="#contact" class="btn btn-outline">Связаться</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img
+            src="https://cache3.youla.io/files/images/720_720_out/5c/e0/5ce0e4bcdf5340ad8e20b987.jpg"
+            alt="Веб-дизайнер"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>Обо мне</h2>
+          <p>Узнайте больше о моем опыте, навыках и профессиональном пути</p>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <h3>Привет, я Кирилл - Веб-дизайнер и UI/UX специалист</h3>
+            <p>
+              С более чем 5-летним опытом в создании цифровых продуктов, я
+              помогаю брендам и компаниям создавать незабываемые
+              пользовательские впечатления. Моя страсть - превращать сложные
+              задачи в элегантные и функциональные решения.
+            </p>
+            <p>
+              Я постоянно изучаю новые тенденции и технологии в дизайне, чтобы
+              предлагать клиентам только самые современные и эффективные
+              решения.
+            </p>
+
+            <div class="skills">
+              <div class="skill">
+                <div class="skill-name">
+                  <span>UI/UX Дизайн</span>
+                  <span>95%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" data-level="95"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">
+                  <span>Веб Разработка</span>
+                  <span>85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" data-level="85"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">
+                  <span>Графический Дизайн</span>
+                  <span>90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" data-level="90"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-image">
+            <img
+              src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+              alt="Рабочее место"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Мои услуги</h2>
+          <p>Комплексный подход к созданию цифровых продуктов</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-pencil-ruler"></i>
+            </div>
+            <h3>UI/UX Дизайн</h3>
+            <p>
+              Создаю интуитивные и привлекательные интерфейсы, ориентированные
+              на пользовательский опыт и бизнес-цели.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3>Веб Разработка</h3>
+            <p>
+              Разрабатываю адаптивные и современные веб-сайты с использованием
+              передовых технологий.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>Мобильный Дизайн</h3>
+            <p>
+              Создаю дизайн мобильных приложений с фокусом на удобство
+              использования и современные тенденции.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-palette"></i>
+            </div>
+            <h3>Графический Дизайн</h3>
+            <p>
+              Разрабатываю фирменный стиль, логотипы и графические материалы для
+              брендов.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3>Аудит UX</h3>
+            <p>
+              Провожу анализ и оценку пользовательского опыта для улучшения
+              существующих продуктов.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3>Брендинг</h3>
+            <p>
+              Создаю уникальные визуальные идентичности, которые выделяют бренды
+              на рынке.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <div class="section-title">
+          <h2>Мои работы</h2>
+          <p>Примеры моих последних проектов и достижений</p>
+        </div>
+        <div class="portfolio-grid">
+          <div class="portfolio-item">
+            <img
+              src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80"
+              alt="Проект 1"
+              class="portfolio-img"
+            />
+            <div class="portfolio-overlay">
+              <h3>Финтех Платформа</h3>
+              <p>
+                Дизайн современной банковской платформы с фокусом на
+                безопасность и удобство
+              </p>
+              <a href="#" class="btn">Подробнее</a>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+              alt="Проект 2"
+              class="portfolio-img"
+            />
+            <div class="portfolio-overlay">
+              <h3>E-commerce Решение</h3>
+              <p>
+                Полный дизайн интернет-магазина с увеличенной конверсией и
+                удобным интерфейсом
+              </p>
+              <a href="#" class="btn">Подробнее</a>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=815&q=80"
+              alt="Проект 3"
+              class="portfolio-img"
+            />
+            <div class="portfolio-overlay">
+              <h3>Медицинское Приложение</h3>
+              <p>
+                UI/UX для мобильного приложения телемедицины с упором на
+                доступность
+              </p>
+              <a href="#" class="btn">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements" id="achievements">
+      <div class="container">
+        <div class="section-title">
+          <h2>Мои достижения</h2>
+          <p>Результаты моей работы и признание в индустрии</p>
+        </div>
+        <div class="achievements-grid">
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="achievement-number">15+</div>
+            <h3>Наград</h3>
+            <p>Международные и национальные награды в области дизайна</p>
+          </div>
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-project-diagram"></i>
+            </div>
+            <div class="achievement-number">120+</div>
+            <h3>Проектов</h3>
+            <p>Успешно завершенных проектов для клиентов по всему миру</p>
+          </div>
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-smile"></i>
+            </div>
+            <div class="achievement-number">98%</div>
+            <h3>Довольных клиентов</h3>
+            <p>Клиентов, которые возвращаются с новыми проектами</p>
+          </div>
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="achievement-number">5+</div>
+            <h3>Лет опыта</h3>
+            <p>Профессионального опыта в веб-дизайне и разработке</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-title">
+          <h2>Отзывы клиентов</h2>
+          <p>Что говорят о моей работе клиенты и партнеры</p>
+        </div>
+        <div class="testimonials-slider">
+          <div class="testimonials-container" id="testimonials-container">
+            <div class="testimonial-card">
+              <div class="client-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <p class="testimonial-text">
+                "Кирилл превзошел все наши ожидания. Его дизайн не только
+                визуально привлекателен, но и значительно улучшил
+                пользовательский опыт нашего приложения. Конверсия увеличилась
+                на 40% после внедрения его решений."
+              </p>
+              <h4 class="client-name">Марина Иванова</h4>
+              <p class="client-role">CEO, TechSolutions</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="client-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <p class="testimonial-text">
+                "Работать с Кириллом - одно удовольствие. Он глубоко погружается
+                в бизнес-процессы и создает дизайн, который решает реальные
+                проблемы пользователей. Наш сайт стал эталоном в нашей нише
+                благодаря его работе."
+              </p>
+              <h4 class="client-name">Дмитрий Петров</h4>
+              <p class="client-role">Маркетинг-директор, GlobalBrand</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="client-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <p class="testimonial-text">
+                "Профессионализм Кирилла впечатляет. Он не только создал
+                потрясающий дизайн для нашего приложения, но и предоставил
+                детальные руководства для разработчиков, что значительно
+                ускорило процесс реализации."
+              </p>
+              <h4 class="client-name">Ольга Сидорова</h4>
+              <p class="client-role">Product Manager, FinTech Startup</p>
+            </div>
+          </div>
+          <div class="slider-controls">
+            <div class="slider-dot active" data-slide="0"></div>
+            <div class="slider-dot" data-slide="1"></div>
+            <div class="slider-dot" data-slide="2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Свяжитесь со мной</h2>
+          <p>Готов обсудить ваш проект и предложить решение</p>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h3>Адрес</h3>
+                <p>Маркс, Россия</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <h3>Телефон</h3>
+                <p>+7 (993) 948 1014</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h3>Email</h3>
+                <p>hello@example.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-globe"></i>
+              </div>
+              <div>
+                <h3>Веб-сайт</h3>
+                <p>www.example.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Ваше имя"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Ваш email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Тема"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  placeholder="Ваше сообщение"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn">Отправить сообщение</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="logo">Portfo<span>lio.</span></div>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+            <a href="#" class="social-link"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2023 Портфолио Веб-дизайнера. Все права защищены.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile Menu Toggle
+      const menuToggle = document.getElementById("menu-toggle");
+      const navLinks = document.getElementById("nav-links");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

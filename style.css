@@ -60,8 +60,7 @@ li > a:visited {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
+  margin-top: auto;
   text-align: center;
 }
 
