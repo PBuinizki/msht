@@ -8,6 +8,10 @@
   font-size: calc(12px + 1vw);
 }
 
+html {
+  height: 100%;
+}
+
 body {
   background-color: #333;
   color: antiquewhite;
@@ -18,6 +22,7 @@ body {
   max-width: 1170px;
   padding: 15px 1vw;
   margin: 15px auto 0px;
+  height: 100%;
 }
 
 h1 {
@@ -61,6 +66,7 @@ li > a:visited {
 }
 
 footer {
+  padding-top: 5%;
   margin-top: auto;
   text-align: center;
 }
