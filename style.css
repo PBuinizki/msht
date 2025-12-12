@@ -50,7 +50,8 @@ main {
 }
 
 ol {
-  padding-left: 2ch;
+  list-style: none;
+  padding-left: 3ch;
 }
 
 li {
