@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Краснов Кирилл | Программист</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Кирилл Краснов</div>
+            <div class="nav-links">
+                <a href="#home">Главная</a>
+                <a href="#about">Обо мне</a>
+                <a href="#skills">Навыки</a>
+                <a href="#projects">Проекты</a>
+                <a href="#contact">Контакты</a>
+            </div>
+            <button class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Герой секция -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Привет, я <span class="highlight">Кирилл Краснов</span></h1>
+                <h2>Full-Stack разработчик</h2>
+                <p>Создаю крутые веб-приложения которые решают реальные проблемы бизнеса</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn">Мои работы</a>
+                    <a href="#contact" class="btn btn-outline">Связаться</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-box">
+                    <div class="code-header">
+                        <div class="dots">
+                            <span style="background:#ff5f56"></span>
+                            <span style="background:#ffbd2e"></span>
+                            <span style="background:#27c93f"></span>
+                        </div>
+                    </div>
+                    <pre><code>
+function createAwesomeProject() {
+    const idea = getClientIdea();
+    const architecture = designSystem(idea);
+    const code = writeCleanCode(architecture);
+    const product = deployAndScale(code);
+    return successfulLaunch(product);
+}
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Обо мне -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Обо мне</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p><strong>7 лет</strong> профессиональной разработки</p>
+                    <p><strong>150+</strong> успешных проектов</p>
+                    <p><strong>99%</strong> довольных клиентов</p>
+                    <p>Специализируюсь на создании высоконагруженных веб-приложений, которые работают быстро и надежно.</p>
+                    <p>Мои системы обрабатывают миллионы запросов в день и приносят клиентам реальную прибыль.</p>
+                </div>
+                <div class="about-image">
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-number">150+</div>
+                            <div class="stat-text">Проектов</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">7 лет</div>
+                            <div class="stat-text">Опыта</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-text">Клиентов</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Навыки -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Мои навыки</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fab fa-js"></i> Frontend</h3>
+                    <div class="skill">
+                        <span>React / Next.js</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%"></div>
+                        </div>
+                        <span>95%</span>
+                    </div>
+                    <div class="skill">
+                        <span>Vue.js</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%"></div>
+                        </div>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill">
+                        <span>TypeScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 92%"></div>
+                        </div>
+                        <span>92%</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skill">
+                        <span>Node.js</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 96%"></div>
+                        </div>
+                        <span>96%</span>
+                    </div>
+                    <div class="skill">
+                        <span>Python / Django</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 88%"></div>
+                        </div>
+                        <span>88%</span>
+                    </div>
+                    <div class="skill">
+                        <span>Базы данных</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 94%"></div>
+                        </div>
+                        <span>94%</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Инструменты</h3>
+                    <div class="skill">
+                        <span>Docker</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 92%"></div>
+                        </div>
+                        <span>92%</span>
+                    </div>
+                    <div class="skill">
+                        <span>AWS</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%"></div>
+                        </div>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill">
+                        <span>Git</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 98%"></div>
+                        </div>
+                        <span>98%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Проекты -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Мои проекты</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="faf.webp" alt="FinTech проект">
+                    </div>
+                    <div class="project-content">
+                        <h3>FinTech Платформа</h3>
+                        <p>Система обработки транзакций для банка. Обрабатывает 5000 операций в секунду.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-chart-line"></i>
+                                <span>+200% эффективности</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-users"></i>
+                                <span>2M+ пользователей</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="gug.jpg" alt="AI Dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Analytics Dashboard</h3>
+                        <p>Панель управления с ML-аналитикой для e-commerce компании.</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-bolt"></i>
+                                <span>40ms response</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>$5M+ revenue</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="unnamed.jpg" alt="Мобильное приложение">
+                    </div>
+                    <div class="project-content">
+                        <h3>HealthTech Приложение</h3>
+                        <p>Мобильное приложение для телемедицины с 1M+ скачиваний.</p>
+                        <div class="project-tech">
+                            <span>React Native</span>
+                            <span>GraphQL</span>
+                            <span>Firebase</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-star"></i>
+                                <span>4.9/5 rating</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-download"></i>
+                                <span>1M+ downloads</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Свяжитесь со мной</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>kirill@krasnov.dev</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Телефон</h3>
+                            <p>+7 (999) 123-45-67</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Локация</h3>
+                            <p>Маркс, Россия</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="text" placeholder="Тема" required>
+                    <textarea placeholder="Сообщение" rows="5" required></textarea>
+                    <button type="submit" class="btn">Отправить сообщение</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Кирилл Краснов. Все права защищены.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
