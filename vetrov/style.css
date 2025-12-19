@@ -1,0 +1,101 @@
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+    margin: 0; padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+.container { max-width: 960px; margin: 30px auto; padding: 0 20px; }
+section {
+    background: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+h2 { border-bottom: 2px solid #e1efff; padding-bottom: 10px; margin-bottom: 20px; }
+
+#intro { text-align: center; }
+#intro img {
+    width: 130px; height: 130px;
+    border-radius: 50%;
+    border: 4px solid #0366d6;
+    margin-bottom: 15px;
+}
+#contact-links a {
+    font-size: 1.8rem;
+    margin: 0 15px;
+    color: #0366d6;
+    transition: 0.3s;
+}
+#contact-links a:hover { transform: scale(1.2); display: inline-block; }
+
+#strengths ul {
+    list-style: none; padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+#strengths li {
+    background: #e1efff;
+    padding: 15px;
+    border-radius: 10px;
+    color: #0366d6;
+    font-weight: bold;
+    text-align: center;
+}
+#strengths li i { margin-bottom: 8px; display: block; font-size: 1.5rem; }
+
+#works {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+.work-card {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.work-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.work-card img { width: 100%; height: 160px; object-fit: cover; }
+.work-info { padding: 15px; }
+
+.faq-item { margin-bottom: 10px; }
+.faq-question {
+    background: #e9f1ff;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 8px;
+    position: relative;
+}
+.faq-question::after { content: '+'; position: absolute; right: 20px; }
+.faq-question.active::after { content: '-'; }
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-out;
+    padding: 0 15px;
+}
+.faq-answer.open { max-height: 100px; padding: 15px; }
+
+#contact-form input, #contact-form textarea {
+    width: 100%; padding: 12px;
+    margin: 10px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+#contact-form button {
+    background: #0366d6;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+#contact-form button:hover { background: #024da3; }

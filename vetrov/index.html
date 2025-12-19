@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мое Портфолио 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cdnjs.cloudflare.com">
+</head>
+<body>
+
+<div class="container">
+    <section id="intro">
+        <img src="IMG_7222.jpg" alt="Мое фото">
+        <h1>Ветров Николай</h1>
+        <p>Веб-разработчик & Дизайнер</p>
+        <div id="contact-links">
+            <a href="lalala@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </section>
+    <section id="strengths-section">
+        <h2>Почему я?</h2>
+        <div id="strengths">
+            <ul>
+                <li><i class="fas fa-bolt"></i> Быстрая разработка</li>
+                <li><i class="fas fa-mobile-alt"></i> Адаптивный дизайн</li>
+                <li><i class="fas fa-code"></i> Чистый код</li>
+                <li><i class="fas fa-search-dollar"></i> SEO оптимизация</li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <h2>Мои проекты</h2>
+        <div id="works">
+            <div class="work-card">
+                <img src="54233465.jpg" alt="Проект 1">
+                <div class="work-info">
+                    <h3>Интернет-магазин</h3>
+                    <a href="#">Смотреть проект →</a>
+                </div>
+            </div>
+            <div class="work-card">
+                <img src="6543644576.jpg" alt="Проект 2">
+                <div class="work-info">
+                    <h3>Лендинг для кофени</h3>
+                    <a href="#">Смотреть проект →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="faq">
+        <h2>Часто задаваемые вопросы</h2>
+        <div class="faq-item">
+            <div class="faq-question">Сколько времени занимает разработка?</div>
+            <div class="faq-answer">Обычно от 3 до 10 рабочих дней в зависимости от сложности.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Делаете ли вы правки?</div>
+            <div class="faq-answer">Да, в стоимость включено 3 этапа бесплатных правок.</div>
+        </div>
+    </section>
+    <section>
+        <h2>Связаться со мной</h2>
+        <form id="contact-form">
+            <label>Ваше имя</label>
+            <input type="text" placeholder="Имя" required>
+            <label>Email</label>
+            <input type="email" placeholder="Почта" required>
+            <label>Сообщение</label>
+            <textarea placeholder="Опишите вашу задачу"></textarea>
+            <button type="submit">Отправить заявку</button>
+        </form>
+    </section>
+</div>
+<script>
+    document.querySelectorAll('.faq-question').forEach(item => {
+        item.addEventListener('click', () => {
+            const answer = item.nextElementSibling;
+            item.classList.toggle('active');
+            answer.classList.toggle('open');
+        });
+    });
+</script>
+</body>
+</html>
